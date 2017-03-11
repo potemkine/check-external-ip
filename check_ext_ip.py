@@ -13,7 +13,7 @@ def send_mail(ip):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login("your mail adress", "your password")
-    body ="YOUR TEXT"
+    body ="your new external ip: %s" %ip
     msg = MIMEText(body)
     msg['Subject'] = 'Subject'
     msg['From'] = 'sender'
